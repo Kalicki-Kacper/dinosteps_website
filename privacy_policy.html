@@ -17,27 +17,73 @@
     <a href="index.html" class="back-link">← Back to Home</a>
 
     <h1>Privacy Policy</h1>
-    <p>Last updated: January 24, 2025</p>
+    <p>Last updated: November 7, 2026</p>
 
-    <h2>1. Introduction</h2>
-    <p>We respect your privacy. DinoSteps was created to help you with daily tasks while maintaining the highest security standards for your data.</p>
-
-    <h2>2. Data Collection</h2>
-    <p>The app does not require account creation or personal details (such as name, address) for its basic functionality. We only collect the text of the tasks you input for the purpose of breaking them down into steps.</p>
-
-    <h2>3. Artificial Intelligence (AI) Usage</h2>
-    <p>To break your task down into smaller steps, the text of your task is sent to a third-party AI provider (OpenAI).</p>
+    <h2>Overview</h2>
+    <p>Dino Steps is an iOS app made by Kacper Kalicki Tryhard Solutions, Poland (“we”, “us”). This policy explains what data the app handles, where it goes and why.</p>
+    <p>In short: your tasks and progress stay on your device. When you ask Dino to break a task into steps, the task text goes through our server to OpenAI to create the steps. The app also uses Google Firebase for that server, for usage statistics and crash reports, and RevenueCat for purchases. You don't create an account, and the app never asks for your email address or phone number.</p>
+    <h2>Data that stays on your device</h2>
     <ul>
-        <li><strong>Anonymity:</strong> Tasks are sent in an anonymized format. We do not attach any user identifiers that would link the task content to you personally.</li>
-        <li><strong>No Model Training:</strong> We use the API in a way that, according to the provider's policy, prevents your data from being used to train their public AI models.</li>
-        <li><strong>Recommendation:</strong> Please do not include sensitive personal information (e.g., passwords, financial data, health records, addresses) in your task descriptions.</li>
+    <li>your tasks and their steps</li>
+    <li>the name you give in onboarding</li>
+    <li>your dino's level, experience points and rewards</li>
+    <li>settings such as sounds, haptics, focus mode and reminders</li>
     </ul>
-
-    <h2>4. Data Sharing</h2>
-    <p>We do not sell or share your data with third parties for marketing purposes. The task content is processed solely by the AI provider (OpenAI) for the specific purpose of generating the response.</p>
-
-    <h2>5. Contact</h2>
-    <p>If you have any questions regarding privacy, please contact us at: <strong>zastrzega_glowa.0k@icloud.com</strong></p>
+    <p>Home Screen widgets read this data from storage that only Dino Steps and its widgets share on the same device. Your data is included in your device's iCloud or computer backup if backups are on. It's deleted when you delete the app.</p>
+    <h2>AI task breakdown (our server and OpenAI)</h2>
+    <p>When you ask Dino to break a task into steps, the app sends the text of that task over an encrypted connection to our server, which runs on Google Firebase Cloud Functions. The server passes the text to OpenAI, which writes the steps and sends them back. Please don't put sensitive personal information in a task.</p>
+    <ul>
+    <li>Our server doesn't store the task text.</li>
+    <li>So the same task isn't sent to OpenAI twice, the server keeps the generated steps for up to 30 days. They're filed under a one-way hash of the task text. This cache is shared by all users and isn't linked to you.</li>
+    <li>OpenAI processes the text under its API terms. OpenAI says it doesn't use data sent through its API to train its models, and that it may keep it for up to 30 days to watch for abuse. See the <a href="https://openai.com/policies/privacy-policy/">OpenAI Privacy Policy</a>.</li>
+    </ul>
+    <h2>Anonymous sign-in and daily limits</h2>
+    <p>To count how many breakdowns you've used and to know whether you have Premium, the app signs in to Firebase Authentication anonymously. This creates a random ID without any personal details. Our server keeps, under that ID, your plan (free or Premium) and how many breakdowns you used each day.</p>
+    <p>To stop abuse, the server also keeps a one-way hash of your IP address for up to one day. Firebase App Check, which uses Apple's App Attest, confirms that requests come from the real app.</p>
+    <h2>Usage statistics (Google Firebase Analytics)</h2>
+    <p>Dino Steps uses Google Firebase Analytics to see how the app is used and what to improve. It records events such as:</p>
+    <ul>
+    <li>screens opened, onboarding steps and settings changed</li>
+    <li>tasks created, started, completed or deleted, with the number of steps, the difficulty and how long it took</li>
+    <li>the length of a task's text and of your name, never the text itself</li>
+    <li>level-ups, rewards, focus mode, and paywall and purchase steps</li>
+    <li>whether you have Premium</li>
+    </ul>
+    <p>Firebase also collects technical data: device model, iOS version, app version, language, an identifier for this installation, and an approximate region worked out from your IP address.</p>
+    <h2>Crash reports (Firebase Crashlytics)</h2>
+    <p>If the app crashes, Firebase Crashlytics sends us a crash report. It contains the technical details of the crash, the device model, iOS and app version, and a Crashlytics installation identifier. It contains none of your tasks.</p>
+    <h2>Purchases (Apple and RevenueCat)</h2>
+    <p>Apple processes subscriptions, and we never see your payment details. Dino Steps uses RevenueCat to check which purchases are active. RevenueCat receives your App Store transaction details, the anonymous ID described above and basic device information.</p>
+    <p>We don't use any of this for advertising. Dino Steps never asks for permission to track you, so it can't use your device's advertising identifier.</p>
+    <h2>Service providers</h2>
+    <ul>
+    <li>Google Firebase (Authentication, Cloud Functions, Firestore, App Check, Analytics, Crashlytics): <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>, <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+    <li>OpenAI: <a href="https://openai.com/policies/privacy-policy/">OpenAI Privacy Policy</a></li>
+    <li>RevenueCat: <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a></li>
+    <li>Apple (App Store purchases, App Attest): <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+    </ul>
+    <p>These providers may process data in the United States. Those transfers rely on the EU–US Data Privacy Framework or the European Commission's standard contractual clauses. We don't sell or rent your data, and we don't share it with advertisers or data brokers.</p>
+    <h2>Legal bases (EEA and UK)</h2>
+    <ul>
+    <li>Breaking down tasks you ask for, daily limits and purchases: performing our contract with you (Art. 6(1)(b) GDPR).</li>
+    <li>Abuse protection, usage statistics and crash reports: our legitimate interest in keeping the app secure, working and improving (Art. 6(1)(f) GDPR). You can object at any time.</li>
+    </ul>
+    <h2>How long data is kept</h2>
+    <ul>
+    <li>Data on your device: until you delete it or delete the app.</li>
+    <li>Task text: not stored on our server. Generated steps: up to 30 days. IP hash: up to one day.</li>
+    <li>Plan and daily usage counts: for as long as you use the app. Ask us and we'll delete them.</li>
+    <li>Usage events: kept by Google for up to 14 months. Crash reports: up to 90 days.</li>
+    <li>Purchase records: kept by RevenueCat and Apple for as long as your purchases need them and the law requires.</li>
+    </ul>
+    <h2>Your rights</h2>
+    <p>You can ask us to access, correct, delete or restrict your personal data, to transfer it, or object to how we use it. Because the app has no accounts, include anything that helps us find your data, such as your App Store receipt. You can also complain to a data protection authority. In Poland that's the President of the Personal Data Protection Office (UODO).</p>
+    <h2>Children</h2>
+    <p>Dino Steps is not meant for children under 13, and we don't knowingly collect data from children.</p>
+    <h2>Changes</h2>
+    <p>We update this page when the app's data practices change, and note important changes in the App Store release notes. The date at the top shows the current version.</p>
+    <h2>Contact</h2>
+    <p>Kacper Kalicki Tryhard Solutions, Poland<br/><a href="mailto:dinosteps@tryhard-solutions.app">dinosteps@tryhard-solutions.app</a></p>
 
 </body>
 </html>
